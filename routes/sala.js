@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const controllerSala = require('../controllers/controllerSala');
+router.get('/getSalas', controllerSala.getSalas);
+router.post('/insertSala', controllerSala.insertSala);
+router.get('/getSalaById/:id_sala', controllerSala.getSalaById);    
+router.put('/updateSala/:id_sala', controllerSala.updateSala);
+router.delete('/deleteSala/:id_sala', controllerSala.deleteSala);
+router.patch('/patchSala/:id_sala', controllerSala.patchSala);
+module.exports = router;
