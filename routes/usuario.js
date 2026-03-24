@@ -10,3 +10,4 @@ router.delete('/deleteUsuario/:id_usuario', controllerUsuario.deleteUsuario);
 router.patch('/patchUsuario/:id_usuario', controllerUsuario.patchUsuario);
 router.get('/getUsuarioByEmail/:email', controllerUsuario.getUsuarioByEmail);
 module.exports = router;
+
