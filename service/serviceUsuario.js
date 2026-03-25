@@ -1,4 +1,4 @@
-const usuarioModel = require('../model/usuarioModel');
+const usuarioModel = require('../model/modelUsuario');
 const usuarioService = {
     getUsuarios: async () => {
         const usuarios = await usuarioModel.getUsuarios();

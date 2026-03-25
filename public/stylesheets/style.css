@@ -1,8 +1,133 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-family: 'Segoe UI';
+    background: #f5f7fa;
 }
 
-a {
-  color: #00B7FF;
+/* NAV */
+.navbar {
+    background: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #eee;
+}
+
+.navbar a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0d47a1;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #ffc107;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.secondary {
+    background: white;
+}
+
+/* INFO */
+.info {
+    padding: 40px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ENDPOINTS */
+.endpoints {
+    padding: 40px;
+}
+
+.module {
+    margin-bottom: 20px;
+}
+
+.endpoint {
+    background: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+}
+
+/* MÉTODOS */
+.method {
+    padding: 4px 8px;
+    border-radius: 5px;
+    color: white;
+}
+
+.GET { background: green; }
+.POST { background: blue; }
+.PUT { background: orange; }
+.PATCH { background: purple; }
+.DELETE { background: red; }
+
+
+.docs {
+    padding: 40px;
+    background: #111;
+    color: #00ffcc;
+}
+
+.docs pre {
+    background: #000;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.about {
+    padding: 40px;
+    background: #f5f7fa;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar a {
+    cursor: pointer;
+}
+
+.module {
+    margin-top: 100px;
 }

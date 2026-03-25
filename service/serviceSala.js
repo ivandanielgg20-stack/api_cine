@@ -1,4 +1,4 @@
-const salaModel = require('../model/salaModel');
+const salaModel = require('../model/modelSala');
 const salaService = {
     getSalas: async()=>{
         return await salaModel.getSalas();

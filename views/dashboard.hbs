@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body>
+
+<!-- 🎬 NAV -->
+<nav class="navbar">
+    <h2>🎬 CineAPI</h2>
+    <div>
+        <a href="javascript:void(0)" onclick="goDocs()">Docs</a>
+        <a href="javascript:void(0)" onclick="goEndpoints()">Endpoints</a>
+        <a href="javascript:void(0)" onclick="goAbout()">About</a>
+    </div>
+</nav>
+
+<!-- 🎥 HERO -->
+<section class="hero">
+    <h1>Bienvenido a Cine API 🍿</h1>
+    <p>Construye sistemas de cine completos con nuestra API REST.</p>
+
+    <div class="buttons">
+        <button onclick="goEndpoints()">Endpoints</button>
+        <button class="secondary" onclick="goDocs()">Ejemplos JSON</button>
+    </div>
+</section>
+
+<!-- 🎯 CARDS -->
+<section class="info">
+    <h2>¿Qué puedes hacer?</h2>
+<div class="cards">
+    <div class="card" onclick="scrollToSection('peliculas')">
+        🎬
+        <h3>Películas</h3>
+    </div>
+
+    <div class="card" onclick="scrollToSection('asientos')">
+        🎟️
+        <h3>Asientos</h3>
+    </div>
+
+    <div class="card" onclick="scrollToSection('funciones')">
+        🎥
+        <h3>Funciones</h3>
+    </div>
+
+    <div class="card" onclick="scrollToSection('compras')">
+        💳
+        <h3>Compras</h3>
+    </div>
+</div>
+</section>
+
+<!-- 📡 ENDPOINTS -->
+<!-- 📡 ENDPOINTS -->
+<section class="endpoints" id="endpoints">
+    <h2>📡 Endpoints</h2>
+
+    {{#each modulos}}
+    <div class="module" id="{{id}}">
+        <h3>{{nombre}}</h3>
+
+        {{#each rutas}}
+        <div class="endpoint">
+            <span class="method {{metodo}}">{{metodo}}</span>
+            <span>{{ruta}}</span>
+        </div>
+        {{/each}}
+
+    </div>
+    {{/each}}
+</section>
+
+<!-- 📄 DOCS (JSON) -->
+<section class="docs" id="docs">
+    <h2>📄 Ejemplos JSON</h2>
+
+<pre>
+POST /api/peliculas
+{
+  "titulo": "Avengers",
+  "duracion": 120,
+  "clasificacion": "B",
+  "genero": "accion",
+  "sinopsis": "Superheroes salvan el mundo",
+  "estado": "cartelera"
+}
+</pre>
+
+<pre>
+POST /api/salas
+{
+  "nombre": "Sala 1",
+  "tipo": "IMAX",
+  "capacidad": 50,
+  "estado": "activa"
+}
+</pre>
+
+<pre>
+POST /api/funciones
+{
+  "id_pelicula": 1,
+  "id_sala": 1,
+  "fecha": "2026-03-25",
+  "hora": "18:00:00",
+  "precio": 85.00,
+  "estado": "programada"
+}
+</pre>
+
+<pre>
+POST /api/compras
+{
+  "id_usuario": 1,
+  "id_funcion": 1,
+  "asientos": [1,2,3]
+}
+</pre>
+
+</section>
+
+<!-- 🚀 ABOUT -->
+<section class="about" id="about">
+    <h2>🚀 About This API</h2>
+
+    <p>
+        Esta API permite construir sistemas completos de cine como:
+    </p>
+
+    <ul>
+        <li>🎬 Sistemas tipo Cinépolis</li>
+        <li>📱 Apps móviles de boletos</li>
+        <li>💻 Sistemas administrativos de cine</li>
+        <li>🎟️ Control de asientos en tiempo real</li>
+        <li>💳 Procesamiento de compras</li>
+    </ul>
+
+    <p>
+        Diseñada con arquitectura escalable usando Node.js, Express y MySQL.
+    </p>
+
+</section>
+
+<script src="javascripts/event.js"></script>
+</body>
+</html>

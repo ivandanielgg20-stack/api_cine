@@ -1,4 +1,4 @@
-serviceUsuario = require('../services/serviceUsuario');
+serviceUsuario = require('../service/serviceUsuario');
 const controllerUsuario = {
     getUsuarios: async (req, res) => {
         try {
