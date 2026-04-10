@@ -131,3 +131,46 @@ html {
 .module {
     margin-top: 100px;
 }
+
+.er {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    text-align: center;
+}
+
+.er h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00ffcc;
+}
+
+/* 🧩 Contenedor del diagrama */
+.er pre {
+    background: #0a0a0a;
+    color: #00ffcc;
+    padding: 25px;
+    border-radius: 12px;
+    overflow-x: auto;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left;
+
+    /* 🔥 efectos visuales */
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+    border: 1px solid rgba(0, 255, 204, 0.3);
+}
+
+/* ✨ scroll bonito */
+.er pre::-webkit-scrollbar {
+    height: 8px;
+}
+
+.er pre::-webkit-scrollbar-thumb {
+    background: #00ffcc;
+    border-radius: 10px;
+}
+
+.er pre::-webkit-scrollbar-track {
+    background: #111;
+}

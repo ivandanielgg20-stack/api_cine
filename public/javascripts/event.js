@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
    
 
-    // 📋 copiar endpoint
+
     document.querySelectorAll('.endpoint').forEach(e => {
         e.addEventListener('click', () => {
             navigator.clipboard.writeText(e.innerText);
